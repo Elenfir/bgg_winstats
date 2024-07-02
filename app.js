@@ -59,16 +59,16 @@ GetData().then(data => {
 }).then((r) => {
     console.log("TOTAL GAMES REGISTERED WITH PLAYERS: " + noGames)
     for (let i=0;i<users.length;i++) {
-        let c = users[i].wins / users[i].gamesplayed
-        users[i].winPercentage = (c * 100).toFixed(2)
+        let wr = users[i].wins / users[i].gamesplayed
+        users[i].winPercentage = (wr * 100).toFixed(2)
         console.log("NAME: " + users[i].name +  " || WINS: " + users[i].wins + " || GAMES_PLAYED: " + users[i].gamesplayed + " || WIN_PERCENTAGE: " + users[i].winPercentage)
     }
     console.log("")
     for (let i=0;i<byGame.length;i++) {
         console.log("GAME: " + byGame[i].name + " || NUMBER OF PLAYS: " + byGame[i].gamesplayed)
         for (let j = 0; j < byGame[i].players.length; j++) {
-            let c = byGame[i].players[j].wins / byGame[i].players[j].gamesplayed
-            byGame[i].players[j].winPercentage = (c * 100).toFixed(2)
+            let wr = byGame[i].players[j].wins / byGame[i].players[j].gamesplayed
+            byGame[i].players[j].winPercentage = (wr * 100).toFixed(2)
             console.log("       NAME: " + byGame[i].players[j].name +  " || WINS: " + byGame[i].players[j].wins + " || GAMES_PLAYED: " + byGame[i].players[j].gamesplayed + " || WIN_PERCENTAGE: " + byGame[i].players[j].winPercentage)
         }
     }
